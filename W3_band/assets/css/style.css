@@ -32,27 +32,60 @@ html {
     background-color: black;
 }
 
-#nav {
-
+#nav, .subnav {
+    list-style-type: none;
 }
 
-#nav li {
+#nav > li {
     display: inline-block;
 }
 
-#nav li a {
+#nav li {
+    position: relative;
+}
+
+
+
+#nav > li > a {     /* Thẻ a phải là con trực tiếp của thẻ li và thẻ li phải là con trực tiếp của nav */
     color: white;
+    text-transform: uppercase;
+}
+
+#nav li a {
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
+    display: block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    color: black;
+    background-color: #ccc;
 }
 
 #nav .subnav {
     display: none;
+    min-width: 160px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+    color: black;
+    padding: 0 12px;
+    line-height: 38px;
 }
 
 #slider {
-
+    
 }
 
 #content {

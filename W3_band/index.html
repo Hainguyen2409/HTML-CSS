@@ -103,7 +103,7 @@
                             <h3 class="place-heading">New York</h3>
                             <p class="place-time">Fri 27 Nov 2016</p>
                             <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <a href="#" class="place-buy-ticket">Buy Tickets</a>
+                            <button href="#" class="place-buy-ticket js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
 
@@ -113,7 +113,7 @@
                             <h3 class="place-heading">Paris</h3>
                             <p class="place-time">Sat 28 Nov 2016</p>
                             <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <a href="#" class="place-buy-ticket">Buy Tickets</a>
+                            <button href="#" class="place-buy-ticket js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
 
@@ -123,7 +123,7 @@
                             <h3 class="place-heading">San Francisco</h3>
                             <p class="place-time">Sun 29 Nov 2016</p>
                             <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                            <a href="#" class="place-buy-ticket">Buy Tickets</a>
+                            <button href="#" class="place-buy-ticket js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -146,9 +146,9 @@
 
     </div>
 
-    <div class="model">
+    <div class="model js-model">
         <div class="model-container">
-            <div class="model-close">
+            <div class="model-close js-model-close">
                 <i class="ti-close"></i>
             </div>
 
@@ -182,5 +182,23 @@
             </footer>
         </div>
     </div>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket');
+        const model = document.querySelector('.js-model');
+        const modelClose = document.querySelector('.js-model-close');
+
+        function showBuyTickets() {
+            model.classList.add('open')
+        }
+        function hideBuyTickets() {
+            modelClose.classList.remove('open')
+        }
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+
+        modelClose.addEventListener('click', hideBuyTickets)
+    </script>
 </body>
 </html>

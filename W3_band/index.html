@@ -61,22 +61,21 @@
                 <p class="about-text">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur tenetur aliquid, quasi expedita nemo dolorum perspiciatis rem itaque ea exercitationem illo blanditiis amet ad esse et, ab asperiores aperiam eum..Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque pariatur, magnam repudiandae delectus maiores cum eum laborum temporibus consequuntur inventore quod sapiente ut aspernatur.
                 </p>
-                <div class="member-list">
-                    <div class="member-item">
+                <div class="row member-list">
+                    <div class="col triple-col text-center">
                         <p class="member-name">Name</p>
                         <img src="/W3_band/assets/img/Band/bandmember.jpg" alt="Dan Raynolds" class="member-img">
                     </div>
 
-                    <div class="member-item">
+                    <div class="col triple-col text-center">
                         <p class="member-name">Name</p>
                         <img src="/W3_band/assets/img/Band/bandmember.jpg" alt="Dan Raynolds" class="member-img">
                     </div>
 
-                    <div class="member-item">
+                    <div class="col triple-col text-center">
                         <p class="member-name">Name</p>
                         <img src="/W3_band/assets/img/Band/bandmember.jpg" alt="Dan Raynolds" class="member-img">
                     </div>
-                    <div class="clear"></div>
                 </div>
             </div>
             <!-- End About -->
@@ -96,8 +95,8 @@
             <!-- End Tickets -->
 
             <!-- Places -->
-                <div class="places-list">
-                    <div class="place-item">
+                <div class="row places-list">
+                    <div class="col triple-col">
                         <img src="/W3_band/assets/img/Place/newyork.jpg" alt="New York" class="place-img">
                         <div class="place-body">
                             <h3 class="place-heading">New York</h3>
@@ -107,7 +106,7 @@
                         </div>
                     </div>
 
-                    <div class="place-item">
+                    <div class="col triple-col">
                         <img src="/W3_band/assets/img/Place/paris.jpg" alt="Paris" class="place-img">
                         <div class="place-body">
                             <h3 class="place-heading">Paris</h3>
@@ -117,7 +116,7 @@
                         </div>
                     </div>
 
-                    <div class="place-item">
+                    <div class="col triple-col">
                         <img src="/W3_band/assets/img/Place/sanfran.jpg" alt="San Francisco" class="place-img">
                         <div class="place-body">
                             <h3 class="place-heading">San Francisco</h3>
@@ -126,7 +125,6 @@
                             <button href="#" class="place-buy-ticket js-buy-ticket">Buy Tickets</button>
                         </div>
                     </div>
-                    <div class="clear"></div>
                 </div>
                 </div>
             </div>
@@ -136,6 +134,33 @@
             <div class="content-section">
                 <h2 class="section-heading">Contact</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
+
+                <div class="contact-content row">
+                    <div class="contact-info col half-col">
+                        <p><i class="ti-location-pin"></i>Chicago, US</p>
+                        <p><i class="ti-mobile"></i>Phone: +00 151515</p>
+                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                    </div>
+
+                    <div class="contact-form col half-col">
+                        <form action="">
+                            <div class="row">
+                                <div class="col half-col">
+                                    <input type="text" placeholder="Name" class="form-control">
+                                </div>
+                                <div class="col half-col">
+                                    <input type="email" placeholder="Email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mt-8">
+                                <div class="col full-col">
+                                    <input type="text" placeholder="Message" class="form-control">
+                                </div>
+                            </div>
+                            <input type="submit" value="SEND VALUE" class="mt-16">
+                        </form>
+                    </div>
+                </div>
             </div>
             <!-- End Contact -->
         </div>
@@ -147,7 +172,7 @@
     </div>
 
     <div class="model js-model">
-        <div class="model-container">
+        <div class="model-container js-model-container">
             <div class="model-close js-model-close">
                 <i class="ti-close"></i>
             </div>
@@ -173,7 +198,7 @@
                 <input id="enter-email" type="Email" class="model-input" placeholder="Enter email...">
 
                 <button id="buy-tickets">
-                    Pay <i class="ti-check"></i>
+                    <div>Pay <i class="ti-check"></i></div>
                 </button>
             </div>
 
@@ -186,19 +211,26 @@
     <script>
         const buyBtns = document.querySelectorAll('.js-buy-ticket');
         const model = document.querySelector('.js-model');
+        const modelContainer = document.querySelector('.js-model-container');
         const modelClose = document.querySelector('.js-model-close');
 
         function showBuyTickets() {
             model.classList.add('open')
         }
         function hideBuyTickets() {
-            modelClose.classList.remove('open')
+            model.classList.remove('open')
         }
         for (const buyBtn of buyBtns) {
             buyBtn.addEventListener('click', showBuyTickets)
         }
 
         modelClose.addEventListener('click', hideBuyTickets)
+
+        model.addEventListener('click', hideBuyTickets)
+
+        modelContainer.addEventListener('click', (event) => {
+            event.stopPropagation()
+        })
     </script>
 </body>
 </html>

@@ -13,10 +13,10 @@
         <div id="header">
             <!-- Nav -->
             <ul id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li>
                     <a href="#">
                         More
@@ -55,7 +55,7 @@
 
         <div id="content">
             <!-- About -->
-            <div class="content-section">
+            <div id="band" class="content-section">
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading">We love music</p>
                 <p class="about-text">
@@ -81,7 +81,7 @@
             <!-- End About -->
 
             <!-- Tour -->
-            <div class="tour-section">
+            <div id="tour" class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading text-white">TOUR DATES</h2>
                     <p class="section-sub-heading text-white">Remember to book your tickets!</p>
@@ -131,7 +131,7 @@
             <!-- End Tour -->
 
             <!-- Contact -->
-            <div class="content-section">
+            <div id="contact" class="content-section">
                 <h2 class="section-heading">Contact</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
 
@@ -146,10 +146,10 @@
                         <form action="">
                             <div class="row">
                                 <div class="col half-col">
-                                    <input type="text" placeholder="Name" class="form-control">
+                                    <input type="text" placeholder="Name" required class="form-control">
                                 </div>
                                 <div class="col half-col">
-                                    <input type="email" placeholder="Email" class="form-control">
+                                    <input type="email" placeholder="Email" required class="form-control">
                                 </div>
                             </div>
                             <div class="row mt-8">
@@ -157,19 +157,35 @@
                                     <input type="text" placeholder="Message" class="form-control">
                                 </div>
                             </div>
-                            <input type="submit" value="SEND VALUE" class="mt-16">
+                            <input type="submit" value="SEND" class="form-submit-btn mt-16">
                         </form>
                     </div>
                 </div>
             </div>
             <!-- End Contact -->
+
+            <!-- Map -->
+            <div class="map-section">
+                <img src="./assets/img/Map/map.jpg" alt="Map.img">
+            </div>
+            <!-- End Map -->
         </div>
 
+        <!-- Footer -->
         <div id="footer">
-
+            <div class="socials-list">
+                <a href="#"><i class="ti-facebook"></i></a>
+                <a href="#"><i class="ti-instagram"></i></a>
+                <a href="#"><i class="ti-youtube"></i></a>
+                <a href="#"><i class="ti-pinterest"></i></a>
+                <a href="#"><i class="ti-twitter"></i></a>
+                <a href="#"><i class="ti-linkedin"></i></a>
+            </div>
+            <p class="copyright">Powered by <a href="#">w3.css</a></p>
         </div>
-
+        <!-- End Footer -->
     </div>
+
 
     <div class="model js-model">
         <div class="model-container js-model-container">

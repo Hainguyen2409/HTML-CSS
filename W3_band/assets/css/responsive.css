@@ -47,4 +47,21 @@
     #header .mobile-menu-btn {
         display: block;
     }
+
+    #content .member-img {
+        width: 60%;
+    }
+
+    .s-col-full,
+    .s-full-width {
+        width: 100%!important;
+    }
+
+    .s-mt-8 {
+        margin-top: 8px !important;
+    }
+
+    .contact-form {
+        margin-top: 16px;
+    }
 }

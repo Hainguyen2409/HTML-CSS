@@ -1,15 +1,44 @@
 /*  PC  */
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
+
+}
+
+/* Tablet & Mobile */
+@media (max-width: 63.9375em) {
+    .place-buy-ticket {
+        padding: 15px 16px;
+    }
+
+    .contact-form .form-control {
+        padding: 15px;
+    }
+
+    #footer .socials-list {
+        font-size: 48px;
+    }
+
+    #footer .socials-list a {
+        margin: 0 8px;
+    }
+
+    #footer .copyright {
+        padding: 12px 0;
+        display: inline-block;
+    }
+
+    .contact-info {
+        line-height: 2;
+    }
 
 }
 
 /*  Tablet  */
-@media (min-width: 740px) and (max-width:1023) {
+@media (min-width: 46.25em) and (max-width:63.9375em) {
 
 }
 
 /*  Mobile  */
-@media (max-width:739px) {
+@media (max-width:46.1875em) {
     #nav {
         display: block;
     }
